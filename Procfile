@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target/dependency/* fintacle
+web: java $JAVA_OPTS -cp target/classes:target/dependency/* com.fintacle.web.controller.LandingController
