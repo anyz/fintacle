@@ -80,6 +80,8 @@
 			<artifactId>maven-war-plugin</artifactId>
 			<configuration>
 				<warSourceDirectory>src/main/webapp</warSourceDirectory>
+				<warName>fintacle-web</warName>
+                <failOnMissingWebXml>false</failOnMissingWebXml>
 			</configuration>
 		</plugin>
       <plugin>

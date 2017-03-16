@@ -25,7 +25,7 @@
   </dependencies>
   
   <build>
-  	<finalName>fintacle-ear</finalName>
+  	<finalName>fintacle-web</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-ear-plugin</artifactId>
