@@ -4,6 +4,7 @@ import nz.net.ultraq.thymeleaf.LayoutDialect;
 import nz.net.ultraq.thymeleaf.decorators.strategies.GroupingStrategy;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -13,14 +14,16 @@ import org.thymeleaf.spring4.view.ThymeleafViewResolver;
 import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
 import org.thymeleaf.templateresolver.TemplateResolver;
 
-@Configuration
-@EnableWebMvc
-public class WebConfig extends WebMvcConfigurerAdapter {
-
-	@Bean
+//@Configuration
+//@EnableWebMvc
+//@ComponentScan(basePackages = "com.fintacle")
+//public class WebConfig extends WebMvcConfigurerAdapter {
+public class WebConfig {
+/*	@Bean
 	public TemplateResolver templateResolver(){
 		ServletContextTemplateResolver templateResolver = new ServletContextTemplateResolver();
-		templateResolver.setPrefix("/templates/");
+		templateResolver.setCacheable(false);
+		templateResolver.setPrefix("classpath:/templates/");
 		templateResolver.setSuffix(".html");
 		templateResolver.setTemplateMode("HTML5");
 		return templateResolver;
@@ -39,7 +42,8 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		ThymeleafViewResolver viewResolver = new ThymeleafViewResolver();
 		viewResolver.setTemplateEngine(templateEngine());
 		viewResolver.setCharacterEncoding("UTF-8");
-		viewResolver.setOrder(1);
+		viewResolver.setOrder(0);
+		viewResolver.setCache(false);
 		return viewResolver;
-	}
+	}*/
 }
