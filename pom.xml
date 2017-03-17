@@ -58,10 +58,16 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+		<plugin>
+			<artifactId>maven-war-plugin</artifactId>
+			<configuration>
+				<warName>fintacle</warName>
+                <failOnMissingWebXml>false</failOnMissingWebXml>
+			</configuration>
+		</plugin>			
 			<plugin>
 	            <groupId>org.apache.maven.plugins</groupId>
 	            <artifactId>maven-dependency-plugin</artifactId>
-	            <version>2.4</version>
 	            <executions>
 	                <execution>
 	                    <id>copy-dependencies</id>
@@ -71,6 +77,7 @@
 	            </executions>
 	        </plugin>				
 		</plugins>
+		<finalName>fintacle</finalName>
 	</build>
 
 
