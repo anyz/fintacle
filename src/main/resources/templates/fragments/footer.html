@@ -5,7 +5,11 @@
 </head>
 <body>
 <div class="container" th:fragment="footer">
-	<p class="text-muted">&copy; 2013 The Static Templates</p>
+	<p class="text-muted text-center">&copy; 
+	<span id="copyright">
+        <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+    </span>
+     finTacle.com</p>
 </div>
 </body>
 </html>
